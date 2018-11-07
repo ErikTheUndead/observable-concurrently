@@ -2,18 +2,21 @@
   "name": "observable-concurrently",
   "version": "1.0.0",
   "description": "Limiting concurrent operations in javascript with Observable",
-  "main": "index.js",
+  "main": "build/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon -e ts --exec \"npm run start\"",
+    "start": "rm -rf build && tsc && node build/index.js"
   },
   "keywords": [
     "Observable",
     "Typescript"
   ],
   "author": "Erik DUHEM",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {},
   "devDependencies": {
+    "nodemon": "^1.18.6",
     "rxjs": "^6.3.3",
     "tslint": "^5.11.0",
     "tslint-config-airbnb": "^5.11.0",
